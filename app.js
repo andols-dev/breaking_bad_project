@@ -1,4 +1,5 @@
 const $modal = document.querySelector(".modal");
+const $heading = document.querySelector(".heading");
 
 async function getCharacterInfo(name) {
   //console.warn(name);
@@ -12,7 +13,7 @@ async function getCharacterInfo(name) {
     const character = await response.json();
     const $modalContent = document.querySelector(".modal-content");
 
-    $modal.style.display = 'block';
+    $modal.style.display = "block";
     $modalContent.innerHTML = character
       .map(
         person => `
@@ -31,17 +32,17 @@ async function getCharacterInfo(name) {
         <div class="close-modal-btn" onclick="$modal.style.display='none'">
         &times;
       </div>
-    ` 
+    `
       )
-      .join(""); 
+      .join("");
   } catch (error) {
     console.error(error);
   }
 }
-
+// Fetch info from all Breaking Bad characters
 async function getAllCharacters() {
   const url = "https://www.breakingbadapi.com/api/characters";
-  
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -50,6 +51,7 @@ async function getAllCharacters() {
     const character = await response.json();
     const $showCase = document.querySelector(".showCase");
 
+    $heading.innerText = "Characters in Breaking Bad";
     $showCase.innerHTML = character
       .map(
         person => `
@@ -73,4 +75,3 @@ async function getAllCharacters() {
 }
 
 getAllCharacters();
-
