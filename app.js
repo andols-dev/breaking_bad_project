@@ -57,8 +57,12 @@ async function getAllCharacters() {
     <img class="charimg" src="${person.img}"/>
     <div class="charinfo">
         <h3>${person.nickname}</h3>
-        <a class='more' onclick="getCharacterInfo(${person.char_id})">More info</a>
+        <div className="more_info">
+    <i class="fas fa-info-circle" onclick="getCharacterInfo(${person.char_id})"></i>
     </div>
+        
+    </div>
+    
     </div>
     `
       )

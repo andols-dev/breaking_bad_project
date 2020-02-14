@@ -27,10 +27,11 @@ div {
 }
 
 .charinfo {
-    background-color: #79b473;
+    background-color: #000;
     color: #fff;
     padding: 20px;
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .modal {
@@ -75,4 +76,16 @@ div {
       top: -31px;
       font-size: 3rem;
       cursor: pointer;
+  }
+
+  
+
+  .fa-info-circle {
+      margin-top: 14px;
+      right: 10px;
+      top: 15px;
+      color: #79b473;
+    
+      cursor: pointer;
+      font-size: 2rem;
   }
