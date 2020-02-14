@@ -28,6 +28,9 @@ async function getCharacterInfo(name) {
         <div class="person_img">
           <img src="${person.img}" />
         </div>
+        <div class="close-modal-btn" onclick="$modal.style.display='none'">
+        &times;
+      </div>
     ` 
       )
       .join(""); 

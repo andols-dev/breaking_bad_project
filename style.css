@@ -53,7 +53,8 @@ div {
     display: flex;
     background: #79b473;
     align-items: center;
-    color: #fff;;
+    color: #fff;
+    position: relative;
   }
 
   .person_info, .person_img {
@@ -62,4 +63,16 @@ div {
 
   .person_img img {
       width: 100%;
+  }
+
+  .close-modal-btn {
+      color: #fff;
+      position: fixed;
+      right: 2rem;
+      top: 0;
+      position: absolute;
+      right:  -13px;
+      top: -31px;
+      font-size: 3rem;
+      cursor: pointer;
   }
