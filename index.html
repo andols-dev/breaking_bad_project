@@ -1,23 +1,35 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="fontawesome/css/all.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="modal">
-    
-    <div class="modal-content">
-      
-    </div><!-- /End of .modal_content -->
-</div><!-- /End of .modal -->
-  <div class="wrapper">
-    <h2 class="heading">Characters in breaking bad</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-content"></div><!-- /End of .modal_content -->
+    </div><!-- /End of .modal -->
 
-  <div class="showCase"></div>
-  <script src="app.js"></script>
-  </div><!-- /End of .wrapper -->
-  
-</body>
+    <div class="wrapper">
+      <h2 class="heading">Characters in breaking bad</h2>
+      <div class="search-result"></div><!-- /End of .search-result -->
+      <div class="showCase"></div><!-- /End of .showCase -->
+    </div><!-- /End of .wrapper -->
+
+    <div class="search-wrapper">
+      <h2>Search for more characters in breaking bad</h2>
+      <form>
+        <input
+          id="searchinput"
+          type="text"
+          placeholder="Enter characters full name"
+        />
+        <button id="searchbutton" type="button">Search</button>
+      </form>
+    </div><!-- /End of .search-wrapper -->
+
+    <script src="app.js"></script>
+  </body>
 </html>

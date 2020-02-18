@@ -1,97 +1,197 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid;  */
+}
+
+form,
+.search-wrapper h2 {
+  display: none;
 }
 .wrapper {
-    max-width: 80%;
-    margin: 4% auto;
+  max-width: 80%;
+  margin: 4% auto;
 }
 .showcase {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .charimg {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    overflow: hidden;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
 }
 div {
-    text-align: center;  
+  text-align: center;
 }
 
 .showcase > div {
-    width: 225px;
+  width: 225px;
 }
 
 .charinfo {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    margin-bottom: 5rem;
-    position: relative;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 5rem;
+  position: relative;
 }
 
 .modal {
-    display: none;   
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.9);
-    padding-top: 50px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 50px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: #79b473;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  padding: 50px 0;
+}
+
+.person {
+  margin-right: 2rem;
+}
+
+.person_info {
+  padding: 10px;
+}
+.person_img img {
+  width: 100%;
+}
+.search-result {
+  display: none;
+  position: relative;
+}
+
+.close-modal-btn {
+  color: #fff;
+}
+.close-info-btn {
+  color: #000;
+}
+.close-modal-btn,
+.close-info-btn {
+  position: absolute;
+  top: -30px;
+  font-size: 3rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.close-modal-btn:focus,
+.close-info-btn:focus {
+    outline: none;
+}
+.close-modal-btn:hover {
+  color: #79b473;
+}
+
+.fa-info-circle {
+  margin-top: 14px;
+  right: 10px;
+  top: 15px;
+  color: #79b473;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.heading {
+  margin-bottom: 1rem;
+}
+
+.image {
+  background: #000;
+  width: 40%;
+}
+
+.image img {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 28px 0;
+  border-color: #79b473;
+}
+
+input:focus {
+  outline: none;
+}
+
+#searchbutton {
+  padding: 10px 45px;
+  background: #79b473;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+#searchbutton:focus {
+  outline: none;
+}
+
+.info {
+  color: #fff;
+}
+.person_info,
+.person_img,
+.image,
+.info {
+  width: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  form {
+    display: block;
   }
-  
-  
+  .search-wrapper {
+    width: 30%;
+    max-width: 700px;
+    margin: 4% auto;
+  }
+  .charinfo {
+    margin-bottom: 1rem;
+  }
+
   .modal-content {
+    flex-direction: row;
     width: 60%;
-    margin: 5% auto 15% auto; 
+    margin: 5% auto 15% auto;
+    padding: 0;
+  }
+  .search-result {
     display: flex;
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 60px;
     background: #79b473;
     align-items: center;
-    color: #fff;
-    position: relative;
+  }
+  .info {
+    padding: 2%;
   }
 
-  .person {
-      margin-right: 2rem;;
+  .close-modal-btn,
+  .close-info-btn {
+    right: 2rem;
+    right: -13px;
+    top: -31px;
   }
-  .person_info, .person_img {
-      width: 50%;
-  }
-
-  .person_img img {
-      width: 100%;
-  }
-
-  .close-modal-btn {
-      color: #fff;
-      position: fixed;
-      right: 2rem;
-      top: 0;
-      position: absolute;
-      right:  -13px;
-      top: -31px;
-      font-size: 3rem;
-      cursor: pointer;
-  }
-
-  
-
-  .fa-info-circle {
-      margin-top: 14px;
-      right: 10px;
-      top: 15px;
-      color: #79b473;
-      cursor: pointer;
-      font-size: 2rem;
-  }
-
-  .heading {
-      margin-bottom: 3rem;
-  }
+}

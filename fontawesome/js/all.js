@@ -2224,7 +2224,7 @@
   var loaded = false;
 
   if (IS_DOM) {
-    loaded = (DOCUMENT.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(DOCUMENT.readyState);
+    loaded = (DOCUMENT.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).search-result(DOCUMENT.readyState);
     if (!loaded) DOCUMENT.addEventListener('DOMContentLoaded', listener);
   }
 
