@@ -59,7 +59,7 @@ async function getAllCharacters() {
     // Characters information will be shown here.
     const $showCase = document.querySelector(".showCase");
 
-    $heading.innerText = "Characters in Breaking Bad";
+    // $heading.innerText = "Characters in Breaking Bad";
 
     // Iterate over character info and show it on the page
     $showCase.innerHTML = character
@@ -67,11 +67,12 @@ async function getAllCharacters() {
         person => `
         <div class="person">
           <img class="charimg" src="${person.img}"/>
+          <div className="more_info">
+          
+        </div> 
         <div class="charinfo">
-          <h3>${person.nickname}</h3>
-        <div className="more_info">
-          <i class="fas fa-info-circle" title="More information" onclick="getCharacterInfo(${person.char_id})"></i>
-        </div>    
+          <h3>Nickname: ${person.nickname}</h3>
+          <i class="fas fa-plus-square" title="More information" onclick="getCharacterInfo(${person.char_id})"></i>
         </div>
       </div>
     `).join("");

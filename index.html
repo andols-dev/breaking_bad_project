@@ -8,27 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <div class="modal">
-      <div class="modal-content"></div><!-- /End of .modal_content -->
-    </div><!-- /End of .modal -->
+    <div class="header">
+      <h3>Breaking Bad Characters</h3>
+      <div class="search-wrapper">
+        <form>
+          <input
+            id="searchinput"
+            type="text"
+            placeholder="Search for a character in Breaking Bad..."
+          />
+          <button id="searchbutton" type="button">Search</button>
+        </form>
+      </div>
+      <!-- /End of .search-wrapper -->
+    </div>
+    <!-- /End of .header -->
 
     <div class="wrapper">
-      <h2 class="heading">Characters in breaking bad</h2>
-      <div class="search-result"></div><!-- /End of .search-result -->
-      <div class="showCase"></div><!-- /End of .showCase -->
-    </div><!-- /End of .wrapper -->
+      <div class="search-result"></div>
+      <!-- /End of .search-result -->
+      <div class="showCase"></div>
+      <!-- /End of .showCase -->
+    </div>
+    <!-- /End of .wrapper -->
 
-    <div class="search-wrapper">
-      <h2>Search for more characters in breaking bad</h2>
-      <form>
-        <input
-          id="searchinput"
-          type="text"
-          placeholder="Enter characters full name"
-        />
-        <button id="searchbutton" type="button">Search</button>
-      </form>
-    </div><!-- /End of .search-wrapper -->
+    <div class="modal">
+      <div class="modal-content"></div>
+      <!-- /End of .modal_content -->
+    </div>
+    <!-- /End of .modal -->
 
     <script src="app.js"></script>
   </body>
